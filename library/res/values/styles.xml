@@ -15,10 +15,13 @@
 -->
 
 <resources xmlns:android="http://schemas.android.com/apk/res/android">
-
     <style name="dtp_alertdialog" parent="android:Theme.Holo.Light.Dialog">
+        <!-- 横画面時のダイアログの幅 -->
         <item name="android:windowMinWidthMajor">@dimen/dtp_date_picker_component_width</item>
+        <!-- 縦画面時のダイアログの幅 -->
         <item name="android:windowMinWidthMinor">@dimen/dtp_date_picker_component_width</item>
+
+        <item name="android:windowBackground">@android:color/transparent</item>
     </style>
 
     <style name="dtp_time_label">

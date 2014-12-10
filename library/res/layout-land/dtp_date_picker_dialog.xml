@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -17,26 +16,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dtp_date_picker_view_animator_height"
-    android:gravity="center"
-    android:orientation="horizontal" >
+    android:gravity="center_horizontal"
+    android:orientation="horizontal">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="@dimen/dtp_date_picker_landscape_date_view_width"
         android:layout_height="match_parent"
         android:layout_gravity="center"
         android:background="@color/white"
-        android:orientation="vertical" >
+        android:orientation="vertical">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dip"
-            android:layout_weight="1"
-            android:orientation="vertical" >
+        <include layout="@layout/dtp_date_picker_header_view" />
 
-            <include layout="@layout/dtp_date_picker_header_view" />
+        <include layout="@layout/dtp_date_picker_selected_date" />
 
-            <include layout="@layout/dtp_date_picker_selected_date" />
-        </LinearLayout>
     </LinearLayout>
 
     <include layout="@layout/dtp_date_picker_view_animator" />
