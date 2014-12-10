@@ -29,10 +29,5 @@
         <include layout="@layout/dtp_date_picker_selected_date" />
     </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="てすとだよ"/>
-
     <include layout="@layout/dtp_date_picker_view_animator" />
 </LinearLayout>

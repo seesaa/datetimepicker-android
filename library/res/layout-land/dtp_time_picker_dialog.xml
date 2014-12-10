@@ -55,7 +55,7 @@
             android:textSize="@dimen/dtp_done_label_size"
             android:textColor="@color/done_text_color" />
     </LinearLayout>
-    <com.android.datetimepicker.time.RadialPickerLayout
+    <jp.seesaa.blog.datetimepicker.time.RadialPickerLayout
         android:id="@+id/time_picker"
         android:layout_width="@dimen/dtp_picker_dimen"
         android:layout_height="match_parent"
