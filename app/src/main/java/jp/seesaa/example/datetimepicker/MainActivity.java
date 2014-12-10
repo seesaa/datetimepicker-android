@@ -2,10 +2,9 @@ package jp.seesaa.example.datetimepicker;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
+import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Toast;
-
-import net.pside.android.example.myapplication.R;
 
 import jp.seesaa.blog.datetimepicker.date.DatePickerDialog;
 import jp.seesaa.blog.datetimepicker.time.RadialPickerLayout;
@@ -36,6 +35,21 @@ public class MainActivity extends FragmentActivity implements
                         .show(getSupportFragmentManager(), "timepicker");
             }
         });
+
+        if (savedInstanceState != null) {
+            final FragmentManager fm = getSupportFragmentManager();
+
+            DatePickerDialog datePicker = (DatePickerDialog) fm.findFragmentByTag("datepicker");
+            if (datePicker != null) {
+                datePicker.setOnDateSetListener(this);
+            }
+
+            TimePickerDialog timePicker = (TimePickerDialog) fm.findFragmentByTag("timepicker");
+            if (timePicker != null) {
+                timePicker.setOnTimeSetListener(this);
+            }
+        }
+
     }
 
     @Override
