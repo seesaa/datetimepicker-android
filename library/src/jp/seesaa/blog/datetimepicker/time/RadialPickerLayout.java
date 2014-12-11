@@ -37,8 +37,8 @@ import android.view.accessibility.AccessibilityManager;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.FrameLayout;
 
-import com.android.datetimepicker.HapticFeedbackController;
-import com.android.datetimepicker.R;
+import jp.seesaa.blog.datetimepicker.HapticFeedbackController;
+import jp.seesaa.blog.datetimepicker.R;
 
 /**
  * The primary layout to hold the circular picker, and the am/pm buttons. This view well measure
@@ -170,7 +170,7 @@ public class RadialPickerLayout extends FrameLayout implements OnTouchListener {
      * @param is24HourMode
      */
     public void initialize(Context context, HapticFeedbackController hapticFeedbackController,
-            int initialHoursOfDay, int initialMinutes, boolean is24HourMode) {
+                           int initialHoursOfDay, int initialMinutes, boolean is24HourMode) {
         if (mTimeInitialized) {
             Log.e(TAG, "Time has already been initialized.");
             return;

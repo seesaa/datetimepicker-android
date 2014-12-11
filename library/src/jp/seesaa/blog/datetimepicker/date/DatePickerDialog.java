@@ -26,7 +26,6 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.text.format.DateUtils;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,15 +38,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.android.datetimepicker.HapticFeedbackController;
-import com.android.datetimepicker.R;
-
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Locale;
 
+import jp.seesaa.blog.datetimepicker.HapticFeedbackController;
+import jp.seesaa.blog.datetimepicker.R;
 import jp.seesaa.blog.datetimepicker.Utils;
 
 /**

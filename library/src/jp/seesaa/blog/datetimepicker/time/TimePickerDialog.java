@@ -36,13 +36,12 @@ import android.view.View.OnKeyListener;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.android.datetimepicker.HapticFeedbackController;
-import com.android.datetimepicker.R;
-
 import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Locale;
 
+import jp.seesaa.blog.datetimepicker.HapticFeedbackController;
+import jp.seesaa.blog.datetimepicker.R;
 import jp.seesaa.blog.datetimepicker.Utils;
 
 /**
@@ -244,7 +243,7 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         mTimePicker.setOnValueSelectedListener(this);
         mTimePicker.setOnKeyListener(keyboardListener);
         mTimePicker.initialize(getActivity(), mHapticFeedbackController, mInitialHourOfDay,
-            mInitialMinute, mIs24HourMode);
+                mInitialMinute, mIs24HourMode);
 
         int currentItemShowing = HOUR_INDEX;
         if (savedInstanceState != null &&

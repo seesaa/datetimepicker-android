@@ -28,11 +28,11 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import com.android.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.date.DatePickerDialog.OnDateChangedListener;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import jp.seesaa.blog.datetimepicker.R;
+import jp.seesaa.blog.datetimepicker.date.DatePickerDialog.OnDateChangedListener;
 
 /**
  * Displays a selectable list of years.
