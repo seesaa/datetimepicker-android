@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="dtp_alertdialog" parent="android:Theme.Material.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">@dimen/dtp_date_picker_component_width</item>
+        <item name="android:windowMinWidthMinor">@dimen/dtp_date_picker_component_width</item>
+    </style>
+</resources>

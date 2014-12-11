@@ -13,12 +13,10 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.datetimepicker"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <application />
-</manifest>
+<jp.seesaa.blog.datetimepicker.date.AccessibleDateAnimator
+     xmlns:android="http://schemas.android.com/apk/res/android"
+     android:id="@+id/animator"
+     android:layout_width="@dimen/dtp_date_picker_component_width"
+     android:layout_height="@dimen/dtp_date_picker_view_animator_height"
+     android:gravity="center"
+     android:background="@color/dtp_date_picker_view_animator" />

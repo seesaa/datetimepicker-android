@@ -13,12 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.datetimepicker"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <application />
-</manifest>
+<jp.seesaa.blog.datetimepicker.date.TextViewWithCircularIndicator
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/month_text_view"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dtp_year_label_height"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:textColor="@color/date_picker_year_selector"
+    android:textSize="@dimen/dtp_year_label_text_size" />

@@ -13,12 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.datetimepicker"
-    android:versionCode="1"
-    android:versionName="1.0" >
 
-    <uses-permission android:name="android.permission.VIBRATE" />
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Style for dialog labels. -->
+    <style name="dtp_time_label_thin">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
 
-    <application />
-</manifest>
+    <style name="dtp_done_button_light">
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="dtp_day_of_week_label_condensed">
+        <item name="android:fontFamily">sans-serif-condensed</item>
+    </style>
+</resources>

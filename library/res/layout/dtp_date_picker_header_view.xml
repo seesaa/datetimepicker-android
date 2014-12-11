@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2013 The Android Open Source Project
+<!--
+     Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,12 +14,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.datetimepicker"
-    android:versionCode="1"
-    android:versionName="1.0" >
-
-    <uses-permission android:name="android.permission.VIBRATE" />
-
-    <application />
-</manifest>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/date_picker_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dtp_date_picker_header_height"
+    android:background="@color/dtp_calendar_header"
+    android:gravity="center"
+    android:includeFontPadding="false"
+    android:textColor="@color/dtp_white"
+    android:textSize="@dimen/dtp_date_picker_header_text_size"
+    android:importantForAccessibility="no" />

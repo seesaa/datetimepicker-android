@@ -13,12 +13,13 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.android.datetimepicker"
-    android:versionCode="1"
-    android:versionName="1.0" >
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true"
+          android:state_pressed="false"
+          android:drawable="@color/dtp_red_focused" />
 
-    <uses-permission android:name="android.permission.VIBRATE" />
+    <item android:state_pressed="true"
+          android:drawable="@color/dtp_red" />
 
-    <application />
-</manifest>
+    <item android:drawable="@color/dtp_dark_gray" />
+</selector>
