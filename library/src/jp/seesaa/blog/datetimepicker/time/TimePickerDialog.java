@@ -511,7 +511,8 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
      */
     private boolean processKeyUp(int keyCode) {
         if (keyCode == KeyEvent.KEYCODE_ESCAPE || keyCode == KeyEvent.KEYCODE_BACK) {
-            dismiss();
+            // When press Back Soft Key, call onCancel() event not onDismiss().
+            getDialog().cancel();
             return true;
         } else if (keyCode == KeyEvent.KEYCODE_TAB) {
             if (mInKbMode) {
