@@ -17,8 +17,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/time_picker_dialog"
     android:layout_height="@dimen/dtp_dialog_height"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
     android:orientation="horizontal"
+
     android:focusable="true"
     android:layout_marginLeft="@dimen/dtp_minimum_margin_sides"
     android:layout_marginRight="@dimen/dtp_minimum_margin_sides"
@@ -40,25 +42,12 @@
                 android:layout_height="@dimen/dtp_header_height"
                 android:layout_gravity="center" />
         </FrameLayout>
-        <View
-            android:id="@+id/line"
-            android:layout_width="match_parent"
-            android:layout_height="1dip"
-            android:background="@color/line_background" />
-        <Button
-            android:id="@+id/done_button"
-            android:background="@drawable/done_background_color"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:minHeight="48dp"
-            android:text="@string/done_label"
-            android:textSize="@dimen/dtp_done_label_size"
-            android:textColor="@color/done_text_color" />
     </LinearLayout>
     <jp.seesaa.blog.datetimepicker.time.RadialPickerLayout
         android:id="@+id/time_picker"
-        android:layout_width="@dimen/dtp_picker_dimen"
-        android:layout_height="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="@dimen/dtp_time_picker_radial_picker_layout_height"
         android:layout_gravity="center"
         android:focusable="true"
         android:focusableInTouchMode="true"
