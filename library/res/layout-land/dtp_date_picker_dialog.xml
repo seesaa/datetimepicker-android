@@ -23,7 +23,7 @@
         android:layout_width="@dimen/dtp_date_picker_landscape_date_view_width"
         android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:background="@color/white"
+        android:background="@color/dtp_white"
         android:orientation="vertical">
 
         <include layout="@layout/dtp_date_picker_header_view" />

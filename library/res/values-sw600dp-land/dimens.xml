@@ -28,6 +28,6 @@
     <dimen name="dtp_separator_padding">5dip</dimen>
     <dimen name="dtp_header_height">96dip</dimen>
     <dimen name="dtp_footer_height">48dip</dimen>
-    <dimen name="left_side_width">315dip</dimen>
+    <dimen name="dtp_left_side_width">315dip</dimen>
 
 </resources>

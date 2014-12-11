@@ -18,9 +18,9 @@
     android:id="@+id/date_picker_header"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dtp_date_picker_header_height"
-    android:background="@color/calendar_header"
+    android:background="@color/dtp_calendar_header"
     android:gravity="center"
     android:includeFontPadding="false"
-    android:textColor="@color/white"
+    android:textColor="@color/dtp_white"
     android:textSize="@dimen/dtp_date_picker_header_text_size"
     android:importantForAccessibility="no" />

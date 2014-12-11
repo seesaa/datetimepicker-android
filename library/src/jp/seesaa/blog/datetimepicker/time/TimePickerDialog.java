@@ -18,10 +18,13 @@ package jp.seesaa.blog.datetimepicker.time;
 
 import android.animation.ObjectAnimator;
 import android.app.ActionBar.LayoutParams;
-import android.content.Context;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.res.ColorStateList;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.util.Log;
 import android.view.KeyCharacterMap;
@@ -30,8 +33,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.View.OnKeyListener;
-import android.view.ViewGroup;
-import android.view.Window;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -74,7 +75,6 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
 
     private HapticFeedbackController mHapticFeedbackController;
 
-    private TextView mDoneButton;
     private TextView mHourView;
     private TextView mHourSpaceView;
     private TextView mMinuteView;
@@ -128,10 +128,10 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         // Empty constructor required for dialog fragment.
     }
 
-    public TimePickerDialog(Context context, int theme, OnTimeSetListener callback,
-                            int hourOfDay, int minute, boolean is24HourMode) {
-        // Empty constructor required for dialog fragment.
-    }
+//    public TimePickerDialog(Context context, int theme, OnTimeSetListener callback,
+//                            int hourOfDay, int minute, boolean is24HourMode) {
+//        // Empty constructor required for dialog fragment.
+//    }
 
     public static TimePickerDialog newInstance(OnTimeSetListener callback,
                                                int hourOfDay, int minute, boolean is24HourMode) {
@@ -186,11 +186,34 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         }
     }
 
+    @NonNull
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-        getDialog().getWindow().requestFeature(Window.FEATURE_NO_TITLE);
+    public Dialog onCreateDialog(Bundle savedInstanceState) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity(), R.style.dtp_alertdialog);
+        builder.setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                if (mInKbMode && isTypedTimeFullyLegal()) {
+                    finishKbMode(false);
+                } else {
+                    tryVibrate();
+                }
+                if (mCallback != null) {
+                    mCallback.onTimeSet(mTimePicker,
+                            mTimePicker.getHours(), mTimePicker.getMinutes());
+                }
+                dismiss();
+            }
+        });
+        builder.setNegativeButton(android.R.string.cancel, null);
 
+        View view = createView(LayoutInflater.from(getActivity()), savedInstanceState);
+        builder.setView(view);
+
+        return builder.create();
+    }
+
+    public View createView(LayoutInflater inflater, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.dtp_time_picker_dialog, null);
         KeyboardListener keyboardListener = new KeyboardListener();
         view.findViewById(R.id.time_picker_dialog).setOnKeyListener(keyboardListener);
@@ -200,8 +223,8 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         mSelectHours = res.getString(R.string.select_hours);
         mMinutePickerDescription = res.getString(R.string.minute_picker_description);
         mSelectMinutes = res.getString(R.string.select_minutes);
-        mSelectedColor = res.getColor(mThemeDark ? R.color.red : R.color.blue);
-        mUnselectedColor = res.getColor(mThemeDark ? R.color.white : R.color.numbers_text_color);
+        mSelectedColor = res.getColor(mThemeDark ? R.color.dtp_red : R.color.dtp_blue);
+        mUnselectedColor = res.getColor(mThemeDark ? R.color.dtp_white : R.color.dtp_numbers_text_color);
 
         mHourView = (TextView) view.findViewById(R.id.hours);
         mHourView.setOnKeyListener(keyboardListener);
@@ -246,23 +269,23 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
             }
         });
 
-        mDoneButton = (TextView) view.findViewById(R.id.done_button);
-        mDoneButton.setOnClickListener(new OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (mInKbMode && isTypedTimeFullyLegal()) {
-                    finishKbMode(false);
-                } else {
-                    tryVibrate();
-                }
-                if (mCallback != null) {
-                    mCallback.onTimeSet(mTimePicker,
-                            mTimePicker.getHours(), mTimePicker.getMinutes());
-                }
-                dismiss();
-            }
-        });
-        mDoneButton.setOnKeyListener(keyboardListener);
+//        mDoneButton = (TextView) view.findViewById(R.id.done_button);
+//        mDoneButton.setOnClickListener(new OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                if (mInKbMode && isTypedTimeFullyLegal()) {
+//                    finishKbMode(false);
+//                } else {
+//                    tryVibrate();
+//                }
+//                if (mCallback != null) {
+//                    mCallback.onTimeSet(mTimePicker,
+//                            mTimePicker.getHours(), mTimePicker.getMinutes());
+//                }
+//                dismiss();
+//            }
+//        });
+//        mDoneButton.setOnKeyListener(keyboardListener);
 
         // Enable or disable the AM/PM view.
         mAmPmHitspace = view.findViewById(R.id.ampm_hitspace);
@@ -314,16 +337,16 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         // Set the theme at the end so that the initialize()s above don't counteract the theme.
         mTimePicker.setTheme(getActivity().getApplicationContext(), mThemeDark);
         // Prepare some colors to use.
-        int white = res.getColor(R.color.white);
-        int circleBackground = res.getColor(R.color.circle_background);
-        int line = res.getColor(R.color.line_background);
-        int timeDisplay = res.getColor(R.color.numbers_text_color);
+        int white = res.getColor(R.color.dtp_white);
+        int circleBackground = res.getColor(R.color.dtp_circle_background);
+        int line = res.getColor(R.color.dtp_line_background);
+        int timeDisplay = res.getColor(R.color.dtp_numbers_text_color);
         ColorStateList doneTextColor = res.getColorStateList(R.color.done_text_color);
         int doneBackground = R.drawable.done_background_color;
 
-        int darkGray = res.getColor(R.color.dark_gray);
-        int lightGray = res.getColor(R.color.light_gray);
-        int darkLine = res.getColor(R.color.line_dark);
+        int darkGray = res.getColor(R.color.dtp_dark_gray);
+        int lightGray = res.getColor(R.color.dtp_light_gray);
+        int darkLine = res.getColor(R.color.dtp_line_dark);
         ColorStateList darkDoneTextColor = res.getColorStateList(R.color.done_text_color_dark);
         int darkDoneBackground = R.drawable.done_background_color_dark;
 
@@ -332,10 +355,10 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         view.findViewById(R.id.time_display).setBackgroundColor(mThemeDark ? darkGray : white);
         ((TextView) view.findViewById(R.id.separator)).setTextColor(mThemeDark ? white : timeDisplay);
         ((TextView) view.findViewById(R.id.ampm_label)).setTextColor(mThemeDark ? white : timeDisplay);
-        view.findViewById(R.id.line).setBackgroundColor(mThemeDark ? darkLine : line);
-        mDoneButton.setTextColor(mThemeDark ? darkDoneTextColor : doneTextColor);
+//        view.findViewById(R.id.line).setBackgroundColor(mThemeDark ? darkLine : line);
+//        mDoneButton.setTextColor(mThemeDark ? darkDoneTextColor : doneTextColor);
         mTimePicker.setBackgroundColor(mThemeDark ? lightGray : circleBackground);
-        mDoneButton.setBackgroundResource(mThemeDark ? darkDoneBackground : doneBackground);
+//        mDoneButton.setBackgroundResource(mThemeDark ? darkDoneBackground : doneBackground);
         return view;
     }
 
@@ -565,7 +588,7 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         if (mTimePicker.trySettingInputEnabled(false) &&
                 (keyCode == -1 || addKeyIfLegal(keyCode))) {
             mInKbMode = true;
-            mDoneButton.setEnabled(false);
+//            mDoneButton.setEnabled(false);
             updateDisplay(false);
         }
     }
@@ -592,7 +615,7 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
                 mTypedTimes.add(mTypedTimes.size() - 1, KeyEvent.KEYCODE_0);
                 mTypedTimes.add(mTypedTimes.size() - 1, KeyEvent.KEYCODE_0);
             }
-            mDoneButton.setEnabled(true);
+//            mDoneButton.setEnabled(true);
         }
 
         return true;
@@ -633,7 +656,7 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
     private int deleteLastTypedKey() {
         int deleted = mTypedTimes.remove(mTypedTimes.size() - 1);
         if (!isTypedTimeFullyLegal()) {
-            mDoneButton.setEnabled(false);
+//            mDoneButton.setEnabled(false);
         }
         return deleted;
     }
@@ -641,7 +664,7 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
     /**
      * Get out of keyboard mode. If there is nothing in typedTimes, revert to TimePicker's time.
      *
-     * @param changeDisplays If true, update the displays with the relevant time.
+     * @param updateDisplays If true, update the displays with the relevant time.
      */
     private void finishKbMode(boolean updateDisplays) {
         mInKbMode = false;
@@ -677,7 +700,7 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
                 updateAmPmDisplay(hour < 12 ? AM : PM);
             }
             setCurrentItemShowing(mTimePicker.getCurrentItemShowing(), true, true, true);
-            mDoneButton.setEnabled(true);
+//            mDoneButton.setEnabled(true);
         } else {
             Boolean[] enteredZeros = {false, false};
             int[] values = getEnteredTime(enteredZeros);

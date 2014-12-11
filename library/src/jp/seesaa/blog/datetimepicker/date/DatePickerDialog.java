@@ -230,8 +230,6 @@ public class DatePickerDialog extends DialogFragment implements
     }
 
     private View createView(LayoutInflater inflater, Bundle savedInstanceState) {
-        Log.d(TAG, "onCreateView: ");
-
         View view = inflater.inflate(R.layout.dtp_date_picker_dialog, null);
 
         mDayOfWeekView = (TextView) view.findViewById(R.id.date_picker_header);

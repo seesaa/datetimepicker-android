@@ -201,11 +201,11 @@ public abstract class MonthView extends View {
         mDayOfWeekTypeface = res.getString(R.string.day_of_week_label_typeface);
         mMonthTitleTypeface = res.getString(R.string.sans_serif);
 
-        mDayTextColor = res.getColor(R.color.date_picker_text_normal);
-        mTodayNumberColor = res.getColor(R.color.blue);
-        mDisabledDayTextColor = res.getColor(R.color.date_picker_text_disabled);
-        mMonthTitleColor = res.getColor(R.color.white);
-        mMonthTitleBGColor = res.getColor(R.color.circle_background);
+        mDayTextColor = res.getColor(R.color.dtp_date_picker_text_normal);
+        mTodayNumberColor = res.getColor(R.color.dtp_blue);
+        mDisabledDayTextColor = res.getColor(R.color.dtp_date_picker_text_disabled);
+        mMonthTitleColor = res.getColor(R.color.dtp_white);
+        mMonthTitleBGColor = res.getColor(R.color.dtp_circle_background);
 
         mStringBuilder = new StringBuilder(50);
         mFormatter = new Formatter(mStringBuilder, Locale.getDefault());

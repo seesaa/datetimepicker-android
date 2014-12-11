@@ -19,4 +19,4 @@
      android:layout_width="@dimen/dtp_date_picker_component_width"
      android:layout_height="@dimen/dtp_date_picker_view_animator_height"
      android:gravity="center"
-     android:background="@color/date_picker_view_animator" />
+     android:background="@color/dtp_date_picker_view_animator" />
