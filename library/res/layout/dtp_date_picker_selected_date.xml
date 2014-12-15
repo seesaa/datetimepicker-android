@@ -31,7 +31,7 @@
         android:layout_gravity="center"
         android:clickable="true"
         android:orientation="vertical"
-        android:textColor="@color/date_picker_selector" >
+        android:textColor="@color/dtp_date_picker_selector" >
 
         <TextView
             android:id="@+id/date_picker_month"
@@ -40,7 +40,7 @@
             android:duplicateParentState="true"
             android:gravity="center_horizontal|bottom"
             android:includeFontPadding="false"
-            android:textColor="@color/date_picker_selector"
+            android:textColor="@color/dtp_date_picker_selector"
             android:textSize="@dimen/dtp_selected_date_month_size" />
 
         <TextView
@@ -53,7 +53,7 @@
             android:duplicateParentState="true"
             android:gravity="center"
             android:includeFontPadding="false"
-            android:textColor="@color/date_picker_selector"
+            android:textColor="@color/dtp_date_picker_selector"
             android:textSize="@dimen/dtp_selected_date_day_size" />
     </jp.seesaa.android.datetimepicker.AccessibleLinearLayout>
 
@@ -64,7 +64,7 @@
         android:layout_gravity="center"
         android:gravity="center_horizontal|top"
         android:includeFontPadding="false"
-        android:textColor="@color/date_picker_selector"
+        android:textColor="@color/dtp_date_picker_selector"
         android:textSize="@dimen/dtp_selected_date_year_size" />
 
 </LinearLayout>

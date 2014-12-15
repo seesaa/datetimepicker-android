@@ -198,8 +198,8 @@ public abstract class MonthView extends View {
         mDayLabelCalendar = Calendar.getInstance();
         mCalendar = Calendar.getInstance();
 
-        mDayOfWeekTypeface = res.getString(R.string.day_of_week_label_typeface);
-        mMonthTitleTypeface = res.getString(R.string.sans_serif);
+        mDayOfWeekTypeface = res.getString(R.string.dtp_day_of_week_label_typeface);
+        mMonthTitleTypeface = res.getString(R.string.dtp_sans_serif);
 
         mDayTextColor = res.getColor(R.color.dtp_date_picker_text_normal);
         mTodayNumberColor = res.getColor(R.color.dtp_blue);
@@ -800,7 +800,7 @@ public abstract class MonthView extends View {
                     mTempCalendar.getTimeInMillis());
 
             if (day == mSelectedDay) {
-                return getContext().getString(R.string.item_is_selected, date);
+                return getContext().getString(R.string.dtp_item_is_selected, date);
             }
 
             return date;

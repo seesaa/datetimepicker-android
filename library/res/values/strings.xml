@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
      Copyright (C) 2013 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
@@ -14,58 +13,58 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Label for button to confirm chosen date or time [CHAR LIMIT=30] -->
-    <string name="done_label">Done</string>
+    <string name="dtp_done_label">Done</string>
     <!--
          Content description for the hour selector in the time picker, which displays
          selectable hours of the day along the inside edge of a circle, as in an analog clock.
          [CHAR LIMIT=50]
     -->
-    <string name="hour_picker_description">Hours circular slider</string>
+    <string name="dtp_hour_picker_description">Hours circular slider</string>
     <!--
          Content description for the minute selector in the time picker, which displays
          selectable five-minute intervals along the inside edge of a circle, as in an analog clock.
          [CHAR LIMIT=50]
     -->
-    <string name="minute_picker_description">Minutes circular slider</string>
+    <string name="dtp_minute_picker_description">Minutes circular slider</string>
     <!-- Accessibility announcement for hour circular picker [CHAR LIMIT=NONE] -->
-    <string name="select_hours">Select hours</string>
+    <string name="dtp_select_hours">Select hours</string>
     <!-- Accessibility announcement for minute circular picker [CHAR LIMIT=NONE] -->
-    <string name="select_minutes">Select minutes</string>
+    <string name="dtp_select_minutes">Select minutes</string>
 
     <!--
         Content description for the month and day selector in the date picker, which displays
         a selectable grid of days laid out by month.
         [CHAR LIMIT=50]
      -->
-    <string name="day_picker_description">Month grid of days</string>
+    <string name="dtp_day_picker_description">Month grid of days</string>
     <!--
         Content description for the year selector in the date picker, which displays
         a scrolling, vertical list of years.
         [CHAR LIMIT=50]
      -->
-    <string name="year_picker_description">Year list</string>
+    <string name="dtp_year_picker_description">Year list</string>
     <!-- Accessibility announcement for the day picker [CHAR LIMIT=NONE] -->
-    <string name="select_day">Select month and day</string>
+    <string name="dtp_select_day">Select month and day</string>
     <!-- Accessibility announcement for the year picker [CHAR LIMIT=NONE] -->
-    <string name="select_year">Select year</string>
+    <string name="dtp_select_year">Select year</string>
     <!-- Accessibility description for the item that is currently selected. -->
-    <string name="item_is_selected"><xliff:g id="item" example="2013">%1$s</xliff:g> selected</string>
+    <string name="dtp_item_is_selected"><xliff:g example="2013" id="item">%1$s</xliff:g> selected</string>
     <!-- Accessibility announcement when a number that had been typed in is deleted [CHAR_LIMIT=NONE] -->
-    <string name="deleted_key"><xliff:g id="key" example="4">%1$s</xliff:g> deleted</string>
+    <string name="dtp_deleted_key"><xliff:g example="4" id="key">%1$s</xliff:g> deleted</string>
 
     <!-- DO NOT TRANSLATE -->
-    <string name="time_placeholder">--</string>
+    <string name="dtp_time_placeholder" translatable="false">--</string>
     <!-- DO NOT TRANSLATE -->
-    <string name="time_separator">:</string>
+    <string name="dtp_time_separator" translatable="false">:</string>
 
     <!-- DO NOT TRANSLATE -->
-    <string name="radial_numbers_typeface">sans-serif</string>
+    <string name="dtp_radial_numbers_typeface" translatable="false">sans-serif</string>
     <!-- DO NOT TRANSLATE -->
-    <string name="sans_serif">sans-serif</string>
+    <string name="dtp_sans_serif" translatable="false">sans-serif</string>
 
     <!-- DO NOT TRANSLATE -->
-    <string name="day_of_week_label_typeface">sans-serif</string>
+    <string name="dtp_day_of_week_label_typeface" tools:ignore="MissingTranslation">sans-serif</string>
 </resources>

@@ -21,7 +21,6 @@
     xmlns:android="http://schemas.android.com/apk/res/android">
 
     <dimen name="dtp_date_picker_header_height">45dp</dimen>
-    <dimen name="time_label_right_padding">16sp</dimen>
     <dimen name="dtp_time_label_size">64sp</dimen>
     <dimen name="dtp_ampm_label_size">21sp</dimen>
     <dimen name="dtp_ampm_left_padding">7dip</dimen>

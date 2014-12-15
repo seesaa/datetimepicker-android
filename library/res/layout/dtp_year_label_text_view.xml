@@ -20,5 +20,5 @@
     android:layout_height="@dimen/dtp_year_label_height"
     android:layout_gravity="center"
     android:gravity="center"
-    android:textColor="@color/date_picker_year_selector"
+    android:textColor="@color/dtp_date_picker_year_selector"
     android:textSize="@dimen/dtp_year_label_text_size" />
