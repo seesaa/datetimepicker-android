@@ -31,7 +31,7 @@
             android:layout_height="@dimen/dtp_header_height"
             android:layout_gravity="center" />
     </FrameLayout>
-    <jp.seesaa.blog.datetimepicker.time.RadialPickerLayout
+    <jp.seesaa.android.datetimepicker.time.RadialPickerLayout
         android:id="@+id/time_picker"
         android:layout_height="@dimen/dtp_picker_dimen"
         android:layout_width="wrap_content"

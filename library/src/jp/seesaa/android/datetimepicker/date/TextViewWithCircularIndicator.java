@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -25,7 +25,7 @@ import android.graphics.Paint.Style;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
-import jp.seesaa.blog.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.R;
 
 /**
  * A text view which, when pressed or activated, displays a blue circle around the text.

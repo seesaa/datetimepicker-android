@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<jp.seesaa.blog.datetimepicker.date.TextViewWithCircularIndicator
+<jp.seesaa.android.datetimepicker.date.TextViewWithCircularIndicator
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/month_text_view"
     android:layout_width="match_parent"

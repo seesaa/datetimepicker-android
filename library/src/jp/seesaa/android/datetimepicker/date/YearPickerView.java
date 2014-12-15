@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -31,8 +31,8 @@ import android.widget.TextView;
 import java.util.ArrayList;
 import java.util.List;
 
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.date.DatePickerDialog.OnDateChangedListener;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.date.DatePickerDialog.OnDateChangedListener;
 
 /**
  * Displays a selectable list of years.

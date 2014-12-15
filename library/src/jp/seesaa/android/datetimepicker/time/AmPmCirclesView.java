@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -27,8 +27,8 @@ import android.view.View;
 
 import java.text.DateFormatSymbols;
 
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
 
 /**
  * Draw the two smaller AM and PM circles next to where the larger circle will be.

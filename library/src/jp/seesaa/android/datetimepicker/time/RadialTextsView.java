@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
@@ -30,7 +30,7 @@ import android.graphics.Typeface;
 import android.util.Log;
 import android.view.View;
 
-import jp.seesaa.blog.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.R;
 
 /**
  * A view to show a series of numbers in a circular pattern.

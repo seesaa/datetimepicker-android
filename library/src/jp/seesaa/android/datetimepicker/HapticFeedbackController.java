@@ -1,4 +1,4 @@
-package jp.seesaa.blog.datetimepicker;
+package jp.seesaa.android.datetimepicker;
 
 import android.app.Service;
 import android.content.Context;

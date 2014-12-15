@@ -13,7 +13,7 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<jp.seesaa.blog.datetimepicker.date.AccessibleDateAnimator
+<jp.seesaa.android.datetimepicker.date.AccessibleDateAnimator
      xmlns:android="http://schemas.android.com/apk/res/android"
      android:id="@+id/animator"
      android:layout_width="@dimen/dtp_date_picker_component_width"

@@ -14,21 +14,21 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker;
+package jp.seesaa.android.datetimepicker;
 
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.accessibility.AccessibilityEvent;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.Button;
-import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * Fake Button class, used so TextViews can announce themselves as Buttons, for accessibility.
  */
-public class AccessibleLinearLayout extends LinearLayout {
+public class AccessibleTextView extends TextView {
 
-    public AccessibleLinearLayout(Context context, AttributeSet attrs) {
+    public AccessibleTextView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 

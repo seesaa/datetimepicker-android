@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -44,9 +44,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
-import jp.seesaa.blog.datetimepicker.date.MonthAdapter.CalendarDay;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.date.MonthAdapter.CalendarDay;
 
 /**
  * A calendar-like view displaying a specified month and the appropriate selectable day numbers
