@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;
@@ -28,8 +28,8 @@ import android.graphics.Paint;
 import android.util.Log;
 import android.view.View;
 
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
 
 /**
  * View to show what number is selected. This will draw a blue circle over the number, with a blue

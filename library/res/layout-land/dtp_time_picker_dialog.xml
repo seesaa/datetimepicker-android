@@ -43,7 +43,7 @@
                 android:layout_gravity="center" />
         </FrameLayout>
     </LinearLayout>
-    <jp.seesaa.blog.datetimepicker.time.RadialPickerLayout
+    <jp.seesaa.android.datetimepicker.time.RadialPickerLayout
         android:id="@+id/time_picker"
         android:layout_width="0dp"
         android:layout_weight="1"

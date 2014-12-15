@@ -13,12 +13,12 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<jp.seesaa.blog.datetimepicker.date.TextViewWithCircularIndicator
+<jp.seesaa.android.datetimepicker.date.TextViewWithCircularIndicator
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/month_text_view"
     android:layout_width="match_parent"
     android:layout_height="@dimen/dtp_year_label_height"
     android:layout_gravity="center"
     android:gravity="center"
-    android:textColor="@color/date_picker_year_selector"
+    android:textColor="@color/dtp_date_picker_year_selector"
     android:textSize="@dimen/dtp_year_label_text_size" />

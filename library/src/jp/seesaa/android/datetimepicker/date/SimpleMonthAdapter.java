@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.content.Context;
 

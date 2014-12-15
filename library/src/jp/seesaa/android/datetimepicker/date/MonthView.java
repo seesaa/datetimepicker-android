@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -44,9 +44,9 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
-import jp.seesaa.blog.datetimepicker.date.MonthAdapter.CalendarDay;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.date.MonthAdapter.CalendarDay;
 
 /**
  * A calendar-like view displaying a specified month and the appropriate selectable day numbers
@@ -198,8 +198,8 @@ public abstract class MonthView extends View {
         mDayLabelCalendar = Calendar.getInstance();
         mCalendar = Calendar.getInstance();
 
-        mDayOfWeekTypeface = res.getString(R.string.day_of_week_label_typeface);
-        mMonthTitleTypeface = res.getString(R.string.sans_serif);
+        mDayOfWeekTypeface = res.getString(R.string.dtp_day_of_week_label_typeface);
+        mMonthTitleTypeface = res.getString(R.string.dtp_sans_serif);
 
         mDayTextColor = res.getColor(R.color.dtp_date_picker_text_normal);
         mTodayNumberColor = res.getColor(R.color.dtp_blue);
@@ -800,7 +800,7 @@ public abstract class MonthView extends View {
                     mTempCalendar.getTimeInMillis());
 
             if (day == mSelectedDay) {
-                return getContext().getString(R.string.item_is_selected, date);
+                return getContext().getString(R.string.dtp_item_is_selected, date);
             }
 
             return date;

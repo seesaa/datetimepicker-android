@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.animation.ObjectAnimator;
 import android.app.Activity;
@@ -44,9 +44,9 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Locale;
 
-import jp.seesaa.blog.datetimepicker.HapticFeedbackController;
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.HapticFeedbackController;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
 
 /**
  * Dialog allowing users to select a date.
@@ -255,10 +255,10 @@ public class DatePickerDialog extends DialogFragment implements
         mYearPickerView = new YearPickerView(activity, this);
 
         Resources res = getResources();
-        mDayPickerDescription = res.getString(R.string.day_picker_description);
-        mSelectDay = res.getString(R.string.select_day);
-        mYearPickerDescription = res.getString(R.string.year_picker_description);
-        mSelectYear = res.getString(R.string.select_year);
+        mDayPickerDescription = res.getString(R.string.dtp_day_picker_description);
+        mSelectDay = res.getString(R.string.dtp_select_day);
+        mYearPickerDescription = res.getString(R.string.dtp_year_picker_description);
+        mSelectYear = res.getString(R.string.dtp_select_year);
 
         mAnimator = (AccessibleDateAnimator) view.findViewById(R.id.animator);
         mAnimator.addView(mDayPickerView);

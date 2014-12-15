@@ -14,13 +14,31 @@ This project is fork of above project and following changes:
 - Use dialog button, not custom view (See image below)
 - Gradle Integration.
 
-![](./image_assets/screenshot01.png)
+![Image](./image_assets/screenshot01.png)
+
 Left : before(original of platform/frameworks/opt/datetimepicker) / Right : after(this project)
 
 How to use
 --------------------
 
-WIP... Sorry ;-)
+<b>This procedure may re-written due to migrating jcenter repos.</b>
+
+Add following lines in your module's `build.gradle`.
+
+```groovy
+repositories {
+    ...
+    maven {
+        url "http://dl.bintray.com/seesaa/maven"
+    }
+}
+
+...
+
+dependencies {
+    compile 'jp.seesaa.android:datetimepicker:0.1.0'
+}
+```
 
 Licenses
 --------------------

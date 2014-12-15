@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -37,8 +37,8 @@ import android.view.accessibility.AccessibilityManager;
 import android.view.accessibility.AccessibilityNodeInfo;
 import android.widget.FrameLayout;
 
-import jp.seesaa.blog.datetimepicker.HapticFeedbackController;
-import jp.seesaa.blog.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.HapticFeedbackController;
+import jp.seesaa.android.datetimepicker.R;
 
 /**
  * The primary layout to hold the circular picker, and the am/pm buttons. This view well measure

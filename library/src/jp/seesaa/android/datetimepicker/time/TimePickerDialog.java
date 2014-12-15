@@ -14,7 +14,7 @@
  * limitations under the License
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.animation.ObjectAnimator;
 import android.app.ActionBar.LayoutParams;
@@ -40,9 +40,9 @@ import java.text.DateFormatSymbols;
 import java.util.ArrayList;
 import java.util.Locale;
 
-import jp.seesaa.blog.datetimepicker.HapticFeedbackController;
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.HapticFeedbackController;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
 
 /**
  * Dialog to set a time.
@@ -218,10 +218,10 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         view.findViewById(R.id.time_picker_dialog).setOnKeyListener(keyboardListener);
 
         Resources res = getResources();
-        mHourPickerDescription = res.getString(R.string.hour_picker_description);
-        mSelectHours = res.getString(R.string.select_hours);
-        mMinutePickerDescription = res.getString(R.string.minute_picker_description);
-        mSelectMinutes = res.getString(R.string.select_minutes);
+        mHourPickerDescription = res.getString(R.string.dtp_hour_picker_description);
+        mSelectHours = res.getString(R.string.dtp_select_hours);
+        mMinutePickerDescription = res.getString(R.string.dtp_minute_picker_description);
+        mSelectMinutes = res.getString(R.string.dtp_select_minutes);
         mSelectedColor = res.getColor(mThemeDark ? R.color.dtp_red : R.color.dtp_blue);
         mUnselectedColor = res.getColor(mThemeDark ? R.color.dtp_white : R.color.dtp_numbers_text_color);
 
@@ -320,8 +320,8 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         setMinute(mInitialMinute);
 
         // Set up for keyboard mode.
-        mDoublePlaceholderText = res.getString(R.string.time_placeholder);
-        mDeletedKeyFormat = res.getString(R.string.deleted_key);
+        mDoublePlaceholderText = res.getString(R.string.dtp_time_placeholder);
+        mDeletedKeyFormat = res.getString(R.string.dtp_deleted_key);
         mPlaceholderText = mDoublePlaceholderText.charAt(0);
         mAmKeyCode = mPmKeyCode = -1;
         generateLegalTimesTree();
@@ -340,14 +340,14 @@ public class TimePickerDialog extends DialogFragment implements RadialPickerLayo
         int circleBackground = res.getColor(R.color.dtp_circle_background);
         int line = res.getColor(R.color.dtp_line_background);
         int timeDisplay = res.getColor(R.color.dtp_numbers_text_color);
-        ColorStateList doneTextColor = res.getColorStateList(R.color.done_text_color);
-        int doneBackground = R.drawable.done_background_color;
+        ColorStateList doneTextColor = res.getColorStateList(R.color.dtp_done_text_color);
+        int doneBackground = R.drawable.dtp_done_background_color;
 
         int darkGray = res.getColor(R.color.dtp_dark_gray);
         int lightGray = res.getColor(R.color.dtp_light_gray);
         int darkLine = res.getColor(R.color.dtp_line_dark);
-        ColorStateList darkDoneTextColor = res.getColorStateList(R.color.done_text_color_dark);
-        int darkDoneBackground = R.drawable.done_background_color_dark;
+        ColorStateList darkDoneTextColor = res.getColorStateList(R.color.dtp_done_text_color_dark);
+        int darkDoneBackground = R.drawable.dtp_done_background_color_dark;
 
         // Set the colors for each view based on the theme.
         view.findViewById(R.id.time_display_background).setBackgroundColor(mThemeDark ? darkGray : white);

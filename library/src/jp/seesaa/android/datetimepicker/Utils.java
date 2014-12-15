@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker;
+package jp.seesaa.android.datetimepicker;
 
 import android.animation.Keyframe;
 import android.animation.ObjectAnimator;

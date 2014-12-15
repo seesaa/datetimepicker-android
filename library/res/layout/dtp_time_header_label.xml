@@ -33,7 +33,7 @@
             android:id="@+id/hour_space"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time_placeholder"
+            android:text="@string/dtp_time_placeholder"
             android:layout_toLeftOf="@+id/separator"
             android:layout_centerVertical="true"
             android:visibility="invisible"
@@ -47,11 +47,11 @@
             android:layout_marginLeft="@dimen/dtp_extra_time_label_margin"
             android:layout_marginRight="@dimen/dtp_extra_time_label_margin"
             android:layout_centerVertical="true" >
-            <jp.seesaa.blog.datetimepicker.AccessibleTextView
+            <jp.seesaa.android.datetimepicker.AccessibleTextView
                 android:id="@+id/hours"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/time_placeholder"
+                android:text="@string/dtp_time_placeholder"
                 android:textColor="@color/dtp_blue"
                 android:gravity="center_horizontal"
                 android:layout_gravity="center"
@@ -62,7 +62,7 @@
             android:id="@+id/separator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time_separator"
+            android:text="@string/dtp_time_separator"
             android:paddingLeft="@dimen/dtp_separator_padding"
             android:paddingRight="@dimen/dtp_separator_padding"
             android:layout_alignRight="@+id/center_view"
@@ -74,7 +74,7 @@
             android:id="@+id/minutes_space"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time_placeholder"
+            android:text="@string/dtp_time_placeholder"
             android:layout_toRightOf="@+id/separator"
             android:layout_centerVertical="true"
             android:visibility="invisible"
@@ -88,16 +88,16 @@
             android:layout_marginLeft="@dimen/dtp_extra_time_label_margin"
             android:layout_marginRight="@dimen/dtp_extra_time_label_margin"
             android:layout_centerVertical="true" >
-            <jp.seesaa.blog.datetimepicker.AccessibleTextView
+            <jp.seesaa.android.datetimepicker.AccessibleTextView
                 android:id="@+id/minutes"
                 style="@style/dtp_time_label"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center_horizontal"
-                android:text="@string/time_placeholder"
+                android:text="@string/dtp_time_placeholder"
                 android:layout_gravity="center" />
         </FrameLayout>
-        <jp.seesaa.blog.datetimepicker.AccessibleTextView
+        <jp.seesaa.android.datetimepicker.AccessibleTextView
             android:id="@+id/ampm_hitspace"
             android:layout_width="@dimen/dtp_ampm_label_size"
             android:layout_height="wrap_content"
@@ -109,7 +109,7 @@
             android:id="@+id/ampm_label"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/time_placeholder"
+            android:text="@string/dtp_time_placeholder"
             android:paddingLeft="@dimen/dtp_ampm_left_padding"
             android:paddingRight="@dimen/dtp_ampm_left_padding"
             android:layout_toRightOf="@+id/minutes_space"

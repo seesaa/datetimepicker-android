@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.view.View;
 import android.widget.Toast;
 
-import jp.seesaa.blog.datetimepicker.date.DatePickerDialog;
-import jp.seesaa.blog.datetimepicker.time.RadialPickerLayout;
-import jp.seesaa.blog.datetimepicker.time.TimePickerDialog;
+import jp.seesaa.android.datetimepicker.date.DatePickerDialog;
+import jp.seesaa.android.datetimepicker.time.RadialPickerLayout;
+import jp.seesaa.android.datetimepicker.time.TimePickerDialog;
 
 
 public class MainActivity extends FragmentActivity implements

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -23,7 +23,7 @@ import android.graphics.Paint;
 import android.util.Log;
 import android.view.View;
 
-import jp.seesaa.blog.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.R;
 
 /**
  * Draws a simple white circle on which the numbers will be drawn.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.date;
+package jp.seesaa.android.datetimepicker.date;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -31,8 +31,8 @@ import android.widget.AbsListView;
 import android.widget.AbsListView.OnScrollListener;
 import android.widget.ListView;
 
-import jp.seesaa.blog.datetimepicker.Utils;
-import jp.seesaa.blog.datetimepicker.date.DatePickerDialog.OnDateChangedListener;
+import jp.seesaa.android.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.date.DatePickerDialog.OnDateChangedListener;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;

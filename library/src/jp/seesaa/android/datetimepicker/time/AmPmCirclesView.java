@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package jp.seesaa.blog.datetimepicker.time;
+package jp.seesaa.android.datetimepicker.time;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -27,8 +27,8 @@ import android.view.View;
 
 import java.text.DateFormatSymbols;
 
-import jp.seesaa.blog.datetimepicker.R;
-import jp.seesaa.blog.datetimepicker.Utils;
+import jp.seesaa.android.datetimepicker.R;
+import jp.seesaa.android.datetimepicker.Utils;
 
 /**
  * Draw the two smaller AM and PM circles next to where the larger circle will be.
@@ -78,7 +78,7 @@ public class AmPmCirclesView extends View {
         mSelectedColor = res.getColor(R.color.dtp_blue);
         mAmPmTextColor = res.getColor(R.color.dtp_ampm_text_color);
         mSelectedAlpha = SELECTED_ALPHA;
-        String typefaceFamily = res.getString(R.string.sans_serif);
+        String typefaceFamily = res.getString(R.string.dtp_sans_serif);
         Typeface tf = Typeface.create(typefaceFamily, Typeface.NORMAL);
         mPaint.setTypeface(tf);
         mPaint.setAntiAlias(true);
