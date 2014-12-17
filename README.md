@@ -21,16 +21,12 @@ Left : before(original of platform/frameworks/opt/datetimepicker) / Right : afte
 How to use
 --------------------
 
-<b>This procedure may re-written due to migrating jcenter repos.</b>
-
 Add following lines in your module's `build.gradle`.
 
 ```groovy
 repositories {
-    ...
-    maven {
-        url "http://dl.bintray.com/seesaa/maven"
-    }
+    // use jcenter repo
+    jcenter()
 }
 
 ...
