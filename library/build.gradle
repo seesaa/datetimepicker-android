@@ -1,21 +1,21 @@
 apply plugin: 'com.android.library'
-apply plugin: 'bintray-release'
+apply plugin: 'com.novoda.bintray-release'
 
 dependencies {
-    compile 'com.android.support:support-v4:21.0.3'
+    compile rootProject.ext.dependencies.supportV4
 }
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
-    resourcePrefix 'dtp_'
+    resourcePrefix rootProject.ext.resourcePrefix
 
     defaultConfig {
-        minSdkVersion 14
-        targetSdkVersion 21
-        versionCode 1
-        versionName "1.0.0"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
     }
 
     sourceSets {
@@ -40,8 +40,8 @@ publish {
     userOrg = 'seesaa'
     groupId = 'jp.seesaa.android'
     artifactId = 'datetimepicker'
-    version = '0.1.0'
-    description = 'DateTimePicker library for Android'
+    publishVersion = '0.1.0'
+    desc = 'DateTimePicker library for Android'
     website = 'https://github.com/keima/datetimepicker'
     issueTracker = "${website}/issues"
     repository = "${website}.git"
