@@ -32,7 +32,7 @@ repositories {
 ...
 
 dependencies {
-    compile 'jp.seesaa.android:datetimepicker:0.1.0'
+    compile 'jp.seesaa.android:datetimepicker:0.2.0'
 }
 ```
 
@@ -40,7 +40,7 @@ Licenses
 --------------------
 
     Copyright (C) 2013 The Android Open Source Project
-    Copyright (C) 2014 Seesaa Inc.
+    Copyright (C) 2014-2016 Seesaa Inc.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
