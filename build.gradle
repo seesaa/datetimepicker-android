@@ -19,7 +19,7 @@ ext {
     minSdkVersionWearable = 21
     targetSdkVersion = 23
     versionCode = 1
-    versionName = "0.2.0"
+    versionName = "0.3.0"
 
     dependencies = [
             supportV4           : 'com.android.support:support-v4:23.2.1',
