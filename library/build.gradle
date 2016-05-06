@@ -40,9 +40,9 @@ publish {
     userOrg = 'seesaa'
     groupId = 'jp.seesaa.android'
     artifactId = 'datetimepicker'
-    publishVersion = '0.1.0'
+    publishVersion = rootProject.ext.versionName
     desc = 'DateTimePicker library for Android'
-    website = 'https://github.com/keima/datetimepicker'
+    website = 'https://github.com/seesaa/datetimepicker-android'
     issueTracker = "${website}/issues"
     repository = "${website}.git"
 }
