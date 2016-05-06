@@ -21,5 +21,5 @@
     <item android:state_pressed="true"
           android:drawable="@color/dtp_red" />
 
-    <item android:drawable="@color/dtp_dark_gray" />
+    <item android:drawable="@color/dtp_white" />
 </selector>
