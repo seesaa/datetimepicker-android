@@ -32,7 +32,7 @@ repositories {
 ...
 
 dependencies {
-    compile 'jp.seesaa.android:datetimepicker:0.2.0'
+    compile 'jp.seesaa.android:datetimepicker:0.3.0'
 }
 ```
 
