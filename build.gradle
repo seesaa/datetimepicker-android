@@ -11,7 +11,7 @@ buildscript {
 // rootProject.ext.*** で参照できます
 ext {
     compileSdkVersion = 23
-    buildToolsVersion = "23.0.0"
+    buildToolsVersion = "23.0.3"
 
     applicationId = "jp.seesaa.example.datetimepicker"
     resourcePrefix = 'dtp_'
@@ -22,11 +22,6 @@ ext {
     versionName = "0.2.0"
 
     dependencies = [
-            supportV4           : 'com.android.support:support-v4:23.0.0',
-            appcompatV7         : 'com.android.support:appcompat-v7:23.0.0',
-            wearable            : 'com.google.android.support:wearable:1.2.0',
-            playServices        : 'com.google.android.gms:play-services:7.8.0',
-            playServicesWearable: 'com.google.android.gms:play-services-wearable:7.8.0',
-            butterKnife         : 'com.jakewharton:butterknife:7.0.1'
+            supportV4           : 'com.android.support:support-v4:23.2.1',
     ]
 }
