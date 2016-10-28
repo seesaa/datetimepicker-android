@@ -10,18 +10,18 @@ buildscript {
 
 // rootProject.ext.*** で参照できます
 ext {
-    compileSdkVersion = 23
-    buildToolsVersion = "23.0.3"
+    compileSdkVersion = 25
+    buildToolsVersion = "25.0.0"
 
     applicationId = "jp.seesaa.example.datetimepicker"
     resourcePrefix = 'dtp_'
     minSdkVersion = 14
     minSdkVersionWearable = 21
-    targetSdkVersion = 23
     versionCode = 1
     versionName = "0.3.0"
+    targetSdkVersion = 25
 
     dependencies = [
-            supportV4           : 'com.android.support:support-v4:23.2.1',
+            supportV4           : "com.android.support:support-v4:25.0.0",
     ]
 }
