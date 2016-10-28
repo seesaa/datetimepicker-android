@@ -17,9 +17,9 @@ ext {
     resourcePrefix = 'dtp_'
     minSdkVersion = 14
     minSdkVersionWearable = 21
-    versionCode = 1
-    versionName = "0.3.0"
     targetSdkVersion = 25
+    versionCode = 4
+    versionName = "0.4.0"
 
     dependencies = [
             supportV4           : "com.android.support:support-v4:25.0.0",
